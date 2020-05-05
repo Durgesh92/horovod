@@ -290,7 +290,7 @@ run_spark_integration() {
       if [[ ${queue} != *gpu* ]]; then
         run_test "${test}" "${queue}" \
           ":spark: PyTests Spark Estimators (${test})" \
-          "bash -c \"cd /horovod/test && pytest --forked -v --capture=no test_spark_keras.py test_spark_torch.py\""
+          "bash -c \"cd /horovod/test && pytest --forked -v test_spark_keras.py test_spark_torch.py\""
       fi
 
       run_test "${test}" "${queue}" \
